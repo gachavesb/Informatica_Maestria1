@@ -20,7 +20,7 @@ def Fisica():
 
 ventana = Tk()
 ventana.geometry('600x600')
-ventana.title("Tarea 1 Informatica")
+ventana.title("Relacion informatica")
 
 imagen1 = PhotoImage(file="grafica2.png")
 imagenbt = PhotoImage(file="grafica1.png")
