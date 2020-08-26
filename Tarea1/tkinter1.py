@@ -1,11 +1,17 @@
+import os
+
 from tkinter import *
 
 from tkinter import messagebox
 
+cmd='python tkinder2.py'
+
 def DefInformatica():
 ####    messagebox.showinfo("XXX",message = "!!")
-    lb2 = Label(ventana, image=imagenbt).place(x=0,y=0)
+    os.system (cmd)
 
+
+    
 def Matematica():
     messagebox.showinfo("MATEMATICAS",message = "Las  Matemáticas  ofrecen  herramientas  que  permiten  analizar, evaluar   y   gestionar   dichas   amenazas   con  el   objetivo   deminimizar su impacto:Algoritmos   criptográficos   para   proteger   la   información (confidencialidad, integridad, autenticidad, etc.)Modelos  matemáticos  para  detectar,  evaluar  y  gestionar potenciales amenazas en la red. Modelos  matemáticos  para  el  análisis  y  comportamiento  de redes terroristas.")
 
