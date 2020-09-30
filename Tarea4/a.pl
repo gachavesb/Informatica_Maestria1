@@ -17,4 +17,9 @@ municipios_cundinamarca('Choachi').
 municipios_cundinamarca('Silvania').
 municipios_cundinamarca('Ubate').
 
+Limita_de_Bogota('Soacha')
+Limita_de_Bogota('Cota')
+Limita_de_Bogota('Chia')
+Limita_de_Bogota('Funza')
+Limita_de_Bogota('Madrid')
 
