@@ -23,7 +23,7 @@ municipios_tolima('Espinal').
 municipios_tolima('Libano').
 municipios_tolima('Mariquita').
 
-municipios_boyaca('Tunja').
+municipios_boyaca('tunja').
 municipios_boyaca('Paipa').
 municipios_boyaca('Villa de Leyva').
 municipios_boyaca('Duitama').
@@ -52,7 +52,7 @@ muy_cercanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=muy_cer
 cercanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=cercanos.
 lejanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=lejos.
 
-pertenece_cundinamarca(L):-municipios_cundinamarca(X),not(municipios_boyaca(X)).
+cercanos_en_cundinamarca(X):-municipios_cundinamarca(X),not(municipios_boyaca(X)).
 
 
 
