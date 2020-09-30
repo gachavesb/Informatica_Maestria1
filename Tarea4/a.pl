@@ -16,11 +16,25 @@ municipios_cundinamarca('Sasaima').
 municipios_cundinamarca('Choachi').
 municipios_cundinamarca('Silvania').
 municipios_cundinamarca('Ubate').
+
+municipios_tolima('Melgar').
+municipios_tolima('Ibague').
+municipios_tolima('Espinal').
+municipios_tolima('Libano').
+municipios_tolima('Mariquita').
+
+municipios_boyaca('Tunja').
+municipios_boyaca('Paipa').
+municipios_boyaca('Villa de Leyva').
+municipios_boyaca('Duitama').
+municipios_boyaca('Mongui').
+
 cercania_a_bogota('Soacha',5).
 cercania_a_bogota('Girardot',100).
 cercania_a_bogota('Sasaima',80).
 cercania_a_bogota('Zipaquira',30).
 cercania_a_bogota('La Vega',50).
+
 temperatura_pueblo_engrados('Soacha',16).
 temperatura_pueblo_engrados('Chia',16).
 temperatura_pueblo_engrados('Girardot',25).
@@ -37,6 +51,8 @@ viajar_cerca_cundinamarca(X,Y):-
 muy_cercanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=muy_cercanos.
 cercanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=cercanos.
 lejanos(X):-cercania_a_bogota(X,Z),viajar_cerca_cundinamarca(Z,W),W=lejos.
+
+pertenece_cundinamarca(L):-municipios_cundinamarca(X),not(municipios_boyaca(X)).
 
 
 
