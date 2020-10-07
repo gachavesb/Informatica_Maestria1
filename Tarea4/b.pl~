@@ -1,0 +1,17 @@
+:-dynamic info_materia/2.
+notas_materia:-
+    write('Ingrese nombre materia '), read(Materia), nl,
+    write('Ingrese valor de la nota del primer corte '), read(Nota1), nl,
+    write('Ingrese valor de la nota del segundo corte '), read(Nota2), nl,
+    write('Ingrege  valor nota del corte final '), read(Notafinal), nl,
+    assert(info_materia(Materia,Prom):- Prom is ((Nota1*0.35)+(Nota2*0.35)+(Notafinal*0.30))).
+
+referencia(X,Y):-
+	X < 3 -> Y = mal;
+	X < 3.5 -> Y = regular;
+	X < 4.5 -> Y = sobresaliente;
+	true -> Y = excelente.
+
+rendimiento():- info_materia(_,P),referencia(P,Y),write(' rendimiento: '),write(Y),write(' con promedio: '),write(P),nl.
+
+borrar :- retract(info_materia()),fail.
